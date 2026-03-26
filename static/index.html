@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Market Signals</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+</head>
+<body>
+  <header>
+    <h1>Market Signals</h1>
+    <p>Prediction market prices correlated with real-world news events</p>
+  </header>
+
+  <div class="stats-bar">
+    <span>Markets: <span class="stat-value" id="stat-markets">0</span></span>
+    <span>Snapshots: <span class="stat-value" id="stat-snapshots">0</span></span>
+    <span>Signals: <span class="stat-value" id="stat-signals">0</span></span>
+    <span>Uptime: <span class="stat-value" id="stat-uptime">0s</span></span>
+  </div>
+
+  <div class="container">
+    <div class="panel" id="signals-panel">
+      <h2>Signals</h2>
+      <div id="signals-list">
+        <div class="empty-state">Waiting for price movements...</div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Price Chart</h2>
+      <div id="chart-container">
+        <canvas id="price-chart"></canvas>
+      </div>
+      <p id="chart-hint" class="empty-state" style="margin-top: 8px;">Click a market row to view its price history</p>
+    </div>
+
+    <div class="panel market-table">
+      <h2>Markets</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Platform</th>
+            <th>Market</th>
+            <th>Price</th>
+            <th>1h Change</th>
+          </tr>
+        </thead>
+        <tbody id="markets-body">
+          <tr><td colspan="4" class="empty-state">Loading...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <footer>
+    Data from Kalshi and Polymarket (public APIs). News from GDELT. Auto-refreshes every 30s.
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

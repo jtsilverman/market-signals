@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "market-signals"
+version = "0.1.0"
+description = "Real-time prediction market + news correlation dashboard. Polls Kalshi & Polymarket, matches price movements with GDELT news events."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.12"
+authors = [{name = "Jacob Silverman"}]
+keywords = ["prediction-markets", "kalshi", "polymarket", "news", "correlation", "dashboard"]
+dependencies = [
+    "aiohttp>=3.9.0",
+    "aiosqlite>=0.20.0",
+    "fastapi>=0.115.0",
+    "uvicorn>=0.34.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["market_signals*"]
+
+[project.scripts]
+market-signals = "market_signals.__main__:main"

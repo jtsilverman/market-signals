@@ -1,0 +1,128 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #0f0f13;
+  color: #e5e5e5;
+  min-height: 100vh;
+}
+
+header {
+  border-bottom: 1px solid #1e1e28;
+  padding: 16px 24px;
+}
+
+header h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.5px; }
+header p { font-size: 13px; color: #666; margin-top: 2px; }
+
+.stats-bar {
+  display: flex;
+  gap: 24px;
+  padding: 12px 24px;
+  background: #16161d;
+  border-bottom: 1px solid #1e1e28;
+  font-size: 13px;
+  font-family: monospace;
+  color: #888;
+}
+
+.stats-bar .stat-value { color: #e5e5e5; font-weight: 600; }
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 16px 24px;
+}
+
+@media (max-width: 900px) {
+  .container { grid-template-columns: 1fr; }
+}
+
+.panel {
+  background: #16161d;
+  border: 1px solid #1e1e28;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.panel h2 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #888;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.signal-card {
+  background: #1a1a24;
+  border: 1px solid #2a2a38;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 8px;
+}
+
+.signal-card .market { font-size: 13px; font-weight: 600; }
+.signal-card .news { font-size: 12px; color: #888; margin-top: 4px; }
+.signal-card .meta { font-size: 11px; color: #555; margin-top: 6px; display: flex; gap: 12px; }
+
+.change-positive { color: #4FCC30; }
+.change-negative { color: #F93C31; }
+
+.market-table {
+  width: 100%;
+  grid-column: 1 / -1;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  font-family: monospace;
+}
+
+th {
+  text-align: left;
+  padding: 8px;
+  color: #555;
+  font-weight: 500;
+  border-bottom: 1px solid #1e1e28;
+  cursor: pointer;
+}
+
+td {
+  padding: 8px;
+  border-bottom: 1px solid #1a1a24;
+}
+
+tr:hover td { background: #1a1a24; }
+
+.platform-badge {
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.platform-kalshi { background: #1a2a1a; color: #4FCC30; }
+.platform-polymarket { background: #1a1a2a; color: #1E93FF; }
+
+#chart-container {
+  position: relative;
+  height: 250px;
+}
+
+.empty-state {
+  color: #444;
+  font-size: 13px;
+  text-align: center;
+  padding: 24px;
+}
+
+footer {
+  border-top: 1px solid #1e1e28;
+  padding: 12px 24px;
+  font-size: 11px;
+  color: #444;
+}
