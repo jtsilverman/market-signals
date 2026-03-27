@@ -1,3 +1,4 @@
+import os
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -10,7 +11,7 @@ class Settings:
     news_lookback_hours: int = 2
     db_path: str = str(Path.home() / ".market-signals" / "data.db")
     host: str = "0.0.0.0"
-    port: int = 8080
+    port: int = int(os.environ.get("PORT", "8080"))
 
     kalshi_base_url: str = "https://api.elections.kalshi.com/trade-api/v2"
     kalshi_market_limit: int = 100
