@@ -4,7 +4,7 @@ Real-time dashboard that polls prediction market contracts from Kalshi and Polym
 
 ## Demo
 
-[Live demo] | ![Market Signals Dashboard](assets/demo.png)
+[**Live demo**](https://market-signals-production.up.railway.app) | ![Market Signals Dashboard](assets/demo.png)
 
 ## The Problem
 
